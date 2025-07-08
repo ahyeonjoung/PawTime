@@ -1,6 +1,5 @@
-import logoImage from '../assets/PawTime.png';
 import henzelSmileImage from '../assets/HenzelSmile.png';
-
+import logoImage from '../assets/PawTime.png';
 import { useCurrentWeather } from '../hooks/useCurrentWeather';
 
 export const MainPage = () => {
@@ -15,7 +14,7 @@ export const MainPage = () => {
 
   const { isTimetoWalk, isSafeTemp, isSafeFeelsLike, isModerateHumidity, isSafeWind, isGoodWeather } = calculateResult;
 
-  const reasonList = [];
+  const reasonList: string[] = [];
   if (!isSafeTemp) {
     reasonList.push('온도가 너무 높아요.');
   }
